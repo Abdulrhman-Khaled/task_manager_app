@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:sizer/sizer.dart';
 import 'package:task_manager_app/controllers/auth_controller.dart';
+import 'package:task_manager_app/services/components/appbar.dart';
 import 'package:task_manager_app/services/components/buttons.dart';
 import 'package:task_manager_app/services/components/text_field.dart';
 import 'package:task_manager_app/services/theme/colors.dart';
@@ -14,23 +15,8 @@ class SignInView extends GetWidget<AuthController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Get.back();
-          },
-          icon: Icon(
-            Ionicons.chevron_back,
-          ),
-        ),
-        backgroundColor: Colors.transparent,
-        iconTheme: const IconThemeData(color: primary),
-        centerTitle: true,
-        title: Text(
-          'Sign In',
-          style: const TextStyle(fontSize: 22, color: primary),
-        ),
+      appBar: CustomAppBar(
+        title: 'Sign In',
       ),
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),

@@ -17,9 +17,10 @@ dependencies:
   firebase_auth:
   cloud_firestore:
   firebase_storage:
+  google_sign_in: ^6.2.2
 
   # State Management
-  get: 
+  get: ^4.7.2
   get_storage:
 
   # UI
@@ -30,12 +31,13 @@ dependencies:
   path: 
   url_launcher: 
   image_picker:
+  intl:
   internet_connection_checker: 
   open_file_plus: ^3.4.1
   permission_handler: 
   file_picker:
   simple_fontellico_progress_dialog: ^0.3.0
-  google_sign_in: ^6.2.2
+  open_file: ^3.5.10
 
 
 

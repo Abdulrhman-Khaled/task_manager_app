@@ -19,7 +19,11 @@ class WelcomeView extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
+              primary,
+              primary,
               primary.withOpacity(0.8),
+              white,
+              white,
               white,
               white,
               white,

@@ -5,9 +5,9 @@ import 'package:task_manager_app/services/theme/colors.dart';
 setSystemChrome() {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     systemNavigationBarColor: primary,
-    statusBarColor: transparent,
+    statusBarColor: primary,
     systemNavigationBarIconBrightness: Brightness.light,
-    statusBarIconBrightness: Brightness.dark,
+    statusBarIconBrightness: Brightness.light,
     systemNavigationBarDividerColor: transparent,
   ));
 }

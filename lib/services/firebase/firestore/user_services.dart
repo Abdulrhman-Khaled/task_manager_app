@@ -25,11 +25,15 @@ class FireStoreUser {
   }
 
   Future<void> updateUser(
-      String userId, String name, ) async {
-    await userCollectionRef
-        .doc(userId)
-        .update({'name': name,})
-        .then((value) => log('done'))
-        .catchError((error) => log('fail'));
+    String userId,
+    String name,
+  ) async {
+    try {
+      await userCollectionRef.doc(userId).update({
+        'name': name,
+      });
+    } catch (e) {
+      log(e.toString());
+    }
   }
 }

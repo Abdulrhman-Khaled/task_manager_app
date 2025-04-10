@@ -54,11 +54,15 @@ class AuthController extends GetxController {
       showProgressDialog();
       await _auth
           .signInWithEmailAndPassword(email: email!, password: password!)
-          .then((value) {
-        getUserData(value.user!.uid);
+          .then((value) async{
+        await getUserData(value.user!.uid);
       });
       hideProgressDialog();
       Get.offAll(() => const HomeView());
+    } on FirebaseAuthException catch (e) {
+      log(e.toString());
+      hideProgressDialog();
+      showRedSnackBar(e.message.toString());
     } catch (e) {
       log(e.toString());
       hideProgressDialog();
